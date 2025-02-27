@@ -22,5 +22,3 @@ int main() {
         ostream_iterator<string>(cout, " "));
    cout << endl;
 }
-
-
