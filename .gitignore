@@ -1,2 +1,3 @@
-*[^/].*     # Ignora fitxers sense extensió
-*. [in|out] # Ignora fitxers d'entrada i sortida
+# Ignora fitxers executables i objecte
+*.exe
+*.o
