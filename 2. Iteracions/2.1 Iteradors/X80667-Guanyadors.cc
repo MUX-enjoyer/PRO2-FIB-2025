@@ -7,7 +7,7 @@ using namespace std;
 struct Player { 
     string name; 
     int score;
-};a
+};
 
 vector<string> winners(vector<Player>::iterator ini, vector<Player>::iterator fin) {
     vector<string> winners;
