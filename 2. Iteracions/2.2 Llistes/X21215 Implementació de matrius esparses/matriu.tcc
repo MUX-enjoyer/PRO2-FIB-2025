@@ -13,13 +13,7 @@ matriu<T>::matriu(int m, int n) {
     nfil = m;
     ncol = n;
     files = vector<list<parint>>(m);
-
-    // Omplir tota la matriu amb valors 0 explícitament
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            files[i].push_back({j, 0});
-        }
-    }
+    // Omplo el vector amb m llistes buides (ja que són tot zeros)
 }
 
 // Modificadora
@@ -29,10 +23,10 @@ void matriu<T>::modif_pos(int i, int j, T x) {
     typename list<parint>::iterator it;
     for (it = files[i].begin(); it != files[i].end(); ++it) {
         if (it->col == j) {
-            if (x == 0)
-                files[i].erase(it);
-            else
+            if (x != 0)
                 it->val = x;
+            else
+                files[i].erase(it);
             return;
         }
     }
@@ -66,12 +60,14 @@ template <typename T>
 void matriu<T>::suma(const matriu& m1, const matriu& m2) {
     nfil = m1.nfil;
     ncol = m1.ncol;
-    matriu m(nfil, ncol);
+    files = vector<list<parint>>(nfil);
 
     for (int i = 0; i < nfil; ++i) {
         for (int j = 0; j < ncol; ++j) {
             T suma_val = m1.pos(i, j) + m2.pos(i, j);
-            m.modif_pos(i, j, suma_val);
+            if (suma_val != 0) {
+                files[i].push_back({j, suma_val});
+            }
         }
     }
 }
@@ -81,7 +77,7 @@ template <typename T>
 void matriu<T>::producte(const matriu& m1, const matriu& m2) {
     nfil = m1.nfil;
     ncol = m2.ncol;
-    matriu m(nfil, ncol);
+    files = vector<list<parint>>(nfil);
 
     for (int i = 0; i < nfil; ++i) {
         for (int j = 0; j < ncol; ++j) {
@@ -89,7 +85,9 @@ void matriu<T>::producte(const matriu& m1, const matriu& m2) {
             for (int k = 0; k < m1.ncol; ++k) {
                 prod_val += m1.pos(i, k) * m2.pos(k, j);
             }
-            modif_pos(i, j, prod_val);
+            if (prod_val != 0) {
+                files[i].push_back({j, prod_val});
+            }
         }
     }
 }
@@ -119,10 +117,16 @@ void matriu<T>::llegeix(int m, int n) {
 template <typename T>
 void matriu<T>::escriu() const {
     for (int i = 0; i < nfil; ++i) {
-        cout << files[i].size();
-        for (typename list<parint>::const_iterator it = files[i].begin(); it != files[i].end(); ++it) {
-            cout << " " << it->col << " " << it->val;
+        typename list<parint>::const_iterator it = files[i].begin();
+        for (int j = 0; j < ncol; ++j) {
+            if (it != files[i].end() && it->col == j) {
+                cout << it->val << " ";
+                ++it;
+            } else {
+                cout << "0 ";
+            }
         }
         cout << endl;
     }
+    cout << endl;
 }
