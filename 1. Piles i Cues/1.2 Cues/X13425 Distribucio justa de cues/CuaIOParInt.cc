@@ -6,17 +6,16 @@ using namespace std;
 #include "ParInt.hh"
 
 void llegirCuaParInt(queue<ParInt>& c) {
-    int x, y;
-    cin >> x >> y;
-    while(x != 0 && y != 0) {
-        c.push({x,y});
-        cin >> x >> y;
+    ParInt parell_enters;
+    while(parell_enters.llegir()) {
+        c.push(parell_enters);
     }
 }
 
 void escriureCuaParInt(queue<ParInt> c) {
-    while (!c.empty()) {
-        cout << c.front().primer() << ' ' << c.front().segon() << endl;
+    while(!c.empty()) {
+        ParInt parell_enters = c.front();
+        parell_enters.escriure();
         c.pop();
     }
 }

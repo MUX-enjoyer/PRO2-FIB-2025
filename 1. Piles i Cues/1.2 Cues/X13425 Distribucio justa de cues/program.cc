@@ -3,7 +3,6 @@ using namespace std;
 
 #include <queue>
 #include <string>
-#include <vector>
 
 #include "CuaIOParInt.hh"
 #include "ParInt.hh"
