@@ -1,3 +1,4 @@
 # Ignora fitxers executables i objecte
 *.exe
 *.o
+.vscode
