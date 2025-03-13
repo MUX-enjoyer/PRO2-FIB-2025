@@ -1,6 +1,5 @@
 #include <iostream>
 #include <map>
-
 using namespace std;
 
 int main() {
@@ -12,8 +11,8 @@ int main() {
         fruites[fruita] += quantitat;
     }
 
-    for (const auto parell : fruites) {
-        cout << parell.first << " " << parell.second << endl;
+    map<string, int>::iterator it;
+    for (it = fruites.begin(); it != fruites.end(); ++it) {
+        cout << it->first << " " << it->second << endl;
     }
-
 }
