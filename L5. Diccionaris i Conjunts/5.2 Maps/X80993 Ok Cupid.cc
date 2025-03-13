@@ -22,16 +22,18 @@ void llegir_usuaris(map<string, int>& usuaris, map<int, vector<string>>& per_val
  * Post: Es mostra una línia per usuari amb els seus compatibles, en ordre alfabètic.
  */
 void trobar_compatibles(const map<string, int>& usuaris, const map<int, vector<string>>& per_valor) {
-    for (const auto parell : usuaris) {
-        const string usuari = parell.first;
-        int valor = parell.second;
+    map<string, int>::const_iterator it;
+    for (it = usuaris.begin(); it != usuaris.end(); ++it) {
+        const string& usuari = it->first;
+        int valor = it->second;
         int oposat = -valor;
 
         cout << usuari;
 
         if (per_valor.count(oposat)) {
-            for (const string& compatible : per_valor.at(oposat)) {
-                if (compatible != usuari) cout << " " << compatible;
+            vector<string>::const_iterator it2;
+            for (it2 = per_valor.at(oposat).begin(); it2 != per_valor.at(oposat).end(); ++it2) {
+                if (*it2 != usuari) cout << " " << *it2;
             }
         }
         cout << endl;
