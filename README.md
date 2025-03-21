@@ -38,6 +38,21 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 ##### 5.3 Conjunts
 - X83904   Activitats esportives (sets)
 - X51146   Activitats esportives ordenades (sets)
+### L6. Arbres Binaris
+##### 6.1 Bàsics
+- S42599   Alçada d'un arbre binari
+- T93544   Suma valors d'un arbre binari
+- Z53201   Cerca un valor en un arbre binari
+- W72736   Arbre binari de sumes
+- Z17905   Arbre binari de mides
+- T78145   Mirall d'un arbre binari
+##### 6.2 Consolidació
+- U38461   Avaluar expressions binàries (1)
+- V80619   Podar un arbre binari
+- U38261   Podar un arbre binari sense repeticions
+##### 6.3 Avançats (no fets encara)
+- W90730   Ordenar un arbre binari per sumes de subarbres
+- V22704   Camí més llarg en un arbre binari
 
 
 RogeR Bitlloch | roger.bitlloch@estudiantat.upc.edu
