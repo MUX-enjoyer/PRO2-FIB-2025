@@ -15,8 +15,11 @@ using namespace pro2;
  *          `false` en cas contrari.
  */
 bool tree_search(Tree<int> t, int x) {
-    int hola = 5;
-    vector<Tree<int>> vec = {t,t,t};
-    Tree<int>();
-    
+    if (t.empty()) return false;
+    if (t.value() == x) return true;
+
+    for (int i = 0; i < t.num_children(); ++i) {
+        if (tree_search(t.child(i), x)) return true;
+    }
+    return false;
 }
