@@ -1,0 +1,121 @@
+VISUALFORMAT
+                           and
+                            |
+                  ---------- ----------
+                 |                     |
+                and                   and
+                 |                     |
+        --------- ---------        ---- ----
+       |                   |      |         |
+      and                  or    true     false
+       |                   |
+   ---- ----           ---- ----
+  |         |         |         |
+false      true     false     false
+
+               or
+               |
+       -------- --------
+      |                 |
+     and               not
+      |                 |
+  ---- ----         ----
+ |         |       |
+true      true    true
+
+          and
+           |
+       ---- ----
+      |         |
+     not       and
+      |         |
+  ----      ---- ----
+ |         |         |
+true     false     false
+
+false
+
+                     or
+                     |
+            --------- ---------
+           |                   |
+           or                  or
+           |                   |
+       ---- ----           ---- ----
+      |         |         |         |
+     and      false     false      true
+      |
+  ---- ----
+ |         |
+true      true
+
+               not
+                |
+            ----
+           |
+           or
+           |
+       ---- ----
+      |         |
+      or       true
+      |
+  ---- ----
+ |         |
+true     false
+
+       or
+       |
+   ---- ----
+  |         |
+false       or
+            |
+        ---- ----
+       |         |
+      not       and
+       |         |
+   ----      ---- ----
+  |         |         |
+false     false     false
+
+                                                            and
+                                                             |
+                                 ---------------------------- ----------------------------
+                                |                                                         |
+                                or                                                       and
+                                |                                                         |
+                 --------------- ---------------                        ------------------ ------------------
+                |                               |                      |                                     |
+                or                             and                     or                                    or
+                |                               |                      |                                     |
+        -------- --------                   ---- ----          -------- --------                    --------- ---------
+       |                 |                 |         |        |                 |                  |                   |
+      and               and               and       true      or               and                and                  or
+       |                 |                 |                  |                 |                  |                   |
+   ---- ----         ---- ----         ---- ----          ---- ----         ---- ----          ---- ----           ---- ----
+  |         |       |         |       |         |        |         |       |         |        |         |         |         |
+false      true    true      true    true      true    false      true    true     false     true     false     false      true
+
+      or
+      |
+  ---- ----
+ |         |
+true     false
+
+                      or
+                      |
+                  ---- ----
+                 |         |
+                 or       true
+                 |
+       ---------- ----------
+      |                     |
+     and                    or
+      |                     |
+  ---- ----         -------- --------
+ |         |       |                 |
+true     false    and                or
+                   |                 |
+               ---- ----         ---- ----
+              |         |       |         |
+            false      true    true     false
+

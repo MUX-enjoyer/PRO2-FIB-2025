@@ -1,0 +1,18 @@
+v.push_back( 1 );
+index++;
+v.push_back( 2 );
+index++;
+v.push_back( 3 );
+index++;
+v.push_back( 4 );
+index++;
+v.push_back( 5 );
+cout<<v[index]<<endl;
+index--;
+cout<<v[index]<<endl;
+index--;
+cout<<v[index]<<endl;
+index--;
+cout<<v[index]<<endl;
+index--;
+cout<<v[index]<<endl;
