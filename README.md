@@ -54,7 +54,7 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 - U38461   Avaluar expressions binàries (1)
 - V80619   Podar un arbre binari
 - U38261   Podar un arbre binari sense repeticions
-##### 6.3 Avançats (no fets encara)
+##### 6.3 Avançats
 - W90730   Ordenar un arbre binari per sumes de subarbres
 - V22704   Camí més llarg en un arbre binari
 
