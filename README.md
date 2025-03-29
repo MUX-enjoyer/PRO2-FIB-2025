@@ -2,6 +2,7 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 
 
 # PRO2 - 2025 - Primavera
+
 ### L3. Piles i Cues
 ##### 3.1 Piles
 - X96935   Palíndroms amb piles
@@ -12,6 +13,7 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 - X13425   Distribucio justa de cues
 - P90861   Cues d'un supermercat (1)
 - X38371   Estadístiques d'una seqüència d'enters amb esborrat del més antic
+
 ### L4. Iteracions
 ##### 4.1 Iteradors
 - X84889   Guanyadors
@@ -24,6 +26,7 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 - X27494   Estadístiques d'una seqüència d'enters amb esborrat
 - X60047   Punt mig d'una llista
 - X21215   Implementació de matrius esparses
+  
 ### L5. Diccionaris i Conjunts
 ##### 5.1 Pairs
 - X16157   Divisió i Mòdul
@@ -38,6 +41,7 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 ##### 5.3 Conjunts
 - X83904   Activitats esportives (sets)
 - X51146   Activitats esportives ordenades (sets)
+  
 ### L6. Arbres Binaris
 ##### 6.1 Bàsics
 - S42599   Alçada d'un arbre binari
@@ -53,6 +57,19 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 ##### 6.3 Avançats (no fets encara)
 - W90730   Ordenar un arbre binari per sumes de subarbres
 - V22704   Camí més llarg en un arbre binari
+
+### L7. Arbres 2
+##### 7.1 Exercicis bàsics d'Arbres Generals
+- Z80280   Alçada d'un arbre
+- W23082   Cerca un valor en un arbre
+- V21234   Arbre mirall
+- Z82639   Avaluar expressions Booleanes
+- Z14339   Imprimir expressions
+##### 7.2 Problemes sobre arbres (binaris i generals) amb inmersió
+- Z78925   Avaluar expressions binàries amb variables
+- Y97108   Reemplaça els nodes d'un arbre binari a profunditat parell per la suma per sota
+- Z19994   Mostra carpetes indentades
+- T47104   Arbre binari de graus de desequilibri
 
 
 RogeR Bitlloch | roger.bitlloch@estudiantat.upc.edu
