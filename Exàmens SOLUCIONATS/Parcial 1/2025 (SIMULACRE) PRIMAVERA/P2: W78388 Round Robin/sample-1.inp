@@ -1,0 +1,13 @@
+a b c
+x y z
+---
+a b
+x y z
+1 2 3 4
+---
+a b c d
+x 
+1 2
+p q r
+$ @
+---
