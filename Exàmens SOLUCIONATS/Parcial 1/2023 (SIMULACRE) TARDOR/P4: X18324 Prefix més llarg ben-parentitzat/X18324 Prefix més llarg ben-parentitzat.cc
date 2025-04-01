@@ -8,35 +8,23 @@ int main() {
 
     while (cin >> line) {
         stack<char> s;
-
-        int last_empty_stack = 0; //pos 0 està¡ ben parentitzada
-        int n = line.size();
-        int i = 0; //iterador
-        bool ben_par = true; //supusem true
-        while(ben_par and i < n) {
-            if (not s.empty()) {
-                if (line[i] == '(' or line [i] == '[') s.push(line[i]);
-
-                else if (line[i] == ')') {
-                    if (s.top() == '(') s.pop();
-                    else ben_par = false;
-                }
-
-                else {
-                    if (s.top() == '[') s.pop();
-                    else ben_par = false;
-                }
-
-                if (s.empty()) last_empty_stack = i + 1;
+        int pos_ben_parentitzada = 0;
+        bool ben_parentitzada = true;
+        for (int i = 0; ben_parentitzada && i < line.size(); ++i) {
+            char c = line[i];
+            if (s.empty()) {
+                if (c == '(' or c == '[') s.push(c);
+                else ben_parentitzada = false;
             }
-
             else {
-                if (line[i] == '(' or line [i] == '[') s.push(line[i]);
-                else ben_par = false;
+                if (c == '(' or line [i] == '[') s.push(c);
+                else if ((c == ')' && s.top() == '(') || (c == ']' && s.top() == '[')) {
+                    s.pop();
+                    if (s.empty()) pos_ben_parentitzada = i+1;
+                }
+                else ben_parentitzada = false;
             }
-            ++i;
         }
-
-        cout << last_empty_stack << endl;
+        cout << pos_ben_parentitzada << endl;
     }
 }
