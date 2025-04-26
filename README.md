@@ -1,6 +1,5 @@
 Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de l'assignatura de PRO2 en C++
 
-
 # PRO2 - 2025 - Primavera
 
 ### L3. Piles i Cues
@@ -26,7 +25,7 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 - X27494   Estadístiques d'una seqüència d'enters amb esborrat
 - X60047   Punt mig d'una llista
 - X21215   Implementació de matrius esparses
-  
+
 ### L5. Diccionaris i Conjunts
 ##### 5.1 Pairs
 - X16157   Divisió i Mòdul
@@ -41,7 +40,7 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 ##### 5.3 Conjunts
 - X83904   Activitats esportives (sets)
 - X51146   Activitats esportives ordenades (sets)
-  
+
 ### L6. Arbres Binaris
 ##### 6.1 Bàsics
 - S42599   Alçada d'un arbre binari
@@ -71,5 +70,36 @@ Tots els exercicis del Jutge del quatrimestre de primavera del curs 2024-2025 de
 - Z19994   Mostra carpetes indentades
 - T47104   Arbre binari de graus de desequilibri
 
+### Disseny modular
+- X64677   Gestión de una lavadora
+
+### Classe `Stack`
+- X94161   Mètode de Stack per a accedir al segon element des del top
+- X72693   Mètode de Stack per a esborrar el segon element des del top
+- X82586   Implementar mètode de la classe Stack per a intercanviar els dos elements del top
+- X80037   Mètode per a sumar el contingut que ve d'una altra pila
+- X87185   Mètode de Stack per a esborrar el primer element igual al paràmetre
+
+### Classe `Queue`
+- X17005   Mètode per a moure el primer element d'una cua cap a la última posició
+- X80705   Nou mètode de la classe Queue per a accedir indexadament als seus elements
+- X86445   Mètode de Queue per a multiplicar els elements de la cua per un paràmetre
+
+### Classe `List`
+- X96416   Mètode de llistes per intercanviar (swappejar) el primer i l'últim element
+- X25312   Mètode de la classe llista per a moure el segon element al final
+- X41197   Mètode de llistes per a moure l'element apuntat per un iterador al final de la llista
+- X75139   Mètode de llistes per a moure l'element apuntat per un iterador una posició cap al final
+- X48340   Modificar operadors ++ i -- dels iteradors de la classe List per a que siguin circulars
+
+### Classes `Arbre` (Binari, N-ari i General)
+- X75329   Nombre d'aparicions d'un valor en un arbre binari
+- X67695   Suma màxima dels camins d'un arbre binari
+- X09609   Cerca de subarbres binaris
+- X15014   Arbre de sumes d'un arbre donat
+- X60365   Cerca en un arbre general
+- X18899   Arbre de sumes d'un arbre n-ari
+
 
 RogeR Bitlloch | roger.bitlloch@estudiantat.upc.edu
+

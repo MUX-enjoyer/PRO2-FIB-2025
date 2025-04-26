@@ -53,11 +53,15 @@ enum Keys {
     PageUp = 3,
     Return = 10,
     Tab = 9,
-    // Arrows,
+    // Arrows
     Up = 17,
     Down = 18,
     Right = 19,
     Left = 20,
+    // Letters
+    W = 87,
+    A = 65,
+    D = 68,
 };
 
 /**
