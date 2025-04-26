@@ -1,4 +1,5 @@
 #include "game.hh"
+
 using namespace pro2;
 
 Game::Game(int width, int height)
@@ -43,6 +44,7 @@ void Game::update_camera(pro2::Window& window) {
     const int bottom = cam.y + window.height() / 4;
 
     int dx = 0, dy = 0;
+
     // if (pos.x > right) {
     //     dx = pos.x - right;
     // } else if (pos.x < left) {
@@ -76,4 +78,11 @@ void Game::paint(pro2::Window& window) {
     }
     mario_.paint(window);
     mario2_.paint(window);
+
+    Rect cam = window.camera_rect();
+    Color vermell = 0x00ff0000;
+    paint_hline(window, cam.left, cam.right, cam.top, vermell);
+    paint_hline(window, cam.left, cam.right, cam.bottom-1, vermell);
+    paint_vline(window, cam.left, cam.top, cam.bottom, vermell);
+    paint_vline(window, cam.right-1, cam.top, cam.bottom, vermell);
 }

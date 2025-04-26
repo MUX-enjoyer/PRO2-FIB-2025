@@ -5,6 +5,8 @@
 #include "mario.hh"
 #include "platform.hh"
 #include "window.hh"
+#include "utils.hh"
+
 
 class Game {
     Mario                 mario_;
