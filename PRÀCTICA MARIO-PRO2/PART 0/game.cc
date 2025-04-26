@@ -85,4 +85,11 @@ void Game::paint(pro2::Window& window) {
     paint_hline(window, cam.left, cam.right, cam.bottom-1, vermell);
     paint_vline(window, cam.left, cam.top, cam.bottom, vermell);
     paint_vline(window, cam.right-1, cam.top, cam.bottom, vermell);
+
+    if (window.frame_count()%75<25) {
+        Pt centre = window.camera_center();
+        Rect rectanglePetit = {centre.x-10, centre.y+10, centre.x+10, centre.y-10};
+        Color groc = 0x00ffff00;
+        paint_rect(window, rectanglePetit, groc);    
+    }
 }

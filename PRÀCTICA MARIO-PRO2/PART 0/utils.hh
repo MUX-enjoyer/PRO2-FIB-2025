@@ -29,6 +29,9 @@ void paint_hline(pro2::Window& window, int xini, int xfin, int y, pro2::Color co
  */
 void paint_vline(pro2::Window& window, int x, int yini, int yfin, pro2::Color color = pro2::white);
 
+
+void paint_rect(pro2::Window& window, Rect r, Color color);
+
 /**
  * @brief Dibuixa una imatge/textura a la finestra a partir d'una posició
  *
