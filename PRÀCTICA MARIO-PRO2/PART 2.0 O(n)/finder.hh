@@ -15,14 +15,14 @@ using namespace std;
 template <typename T>
 class Finder {
 private:
-    set<const T*> objects_;
+    set<T*> objects_;
 
 public:
     Finder() {}
 
-    void add(const T *t);
-    void update(const T *t);
-    void remove(const T *t);
+    void add(T *t);
+    void update(T *t);
+    void remove(T *t);
 
     /**
     * @brief Retorna el conjunt d'objectes amb rectangles 
@@ -36,7 +36,7 @@ public:
     * @returns Un conjunt de punters a objectes que tenen un 
     *          rectangle parcial o totalment dins de `rect`
     */
-    set<const T *> query(pro2::Rect rect) const;
+    set<T *> query(pro2::Rect rect);
 };
 
 #endif // FINDER_HH

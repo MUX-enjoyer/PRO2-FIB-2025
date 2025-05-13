@@ -12,7 +12,7 @@ template class Finder<Strawberry>;
 // NO ÉS LA VERSIÓ DEFINITIVA AMB TEMPS O(log n)
 
 template <typename T>
-void Finder<T>::add(const T *t) {
+void Finder<T>::add(T *t) {
     Rect rect = t->get_rect();
     obj_rect_map_[t] = rect;
 
@@ -21,7 +21,7 @@ void Finder<T>::add(const T *t) {
 }
 
 template <typename T>
-void Finder<T>::remove(const T *t) {
+void Finder<T>::remove(T *t) {
     // Si existeix
     auto it = obj_rect_map_.find(t);
     if (it != obj_rect_map_.end()) {
@@ -38,14 +38,14 @@ void Finder<T>::remove(const T *t) {
 }
 
 template <typename T>
-void Finder<T>::update(const T *t) {
+void Finder<T>::update(T *t) {
     remove(t);
     add(t);
 }
 
 template <typename T>
-set<const T*> Finder<T>::query(Rect rect) const {
-    set<const T*> result;
+set<T*> Finder<T>::query(Rect rect) {
+    set<T*> result;
     
     // Busco el primer objecte que left <= rect.right
     // Cost: O(log n)
@@ -54,7 +54,7 @@ set<const T*> Finder<T>::query(Rect rect) const {
     // Itero només amb aquells objectes que left > rect.right
     while (it != x_start_map_.end() && it->first <= rect.right) {
         // Per cada objecte
-        for (const T* obj : it->second) {
+        for (T* obj : it->second) {
             // Agafo el rectàngle
             Rect obj_rect = obj->get_rect();
                         

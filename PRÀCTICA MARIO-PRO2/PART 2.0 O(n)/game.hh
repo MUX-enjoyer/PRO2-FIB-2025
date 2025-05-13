@@ -19,6 +19,8 @@ class Game {
 
     Finder<Platform> platform_finder_;
     Finder<Strawberry> strawberry_finder_;
+    set<Platform*> visible_platforms_;
+    set<Strawberry*> visible_strawberrys_;
 
     void process_keys(pro2::Window& window);
     void update_objects(pro2::Window& window);

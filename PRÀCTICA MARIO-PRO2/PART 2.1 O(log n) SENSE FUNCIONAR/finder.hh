@@ -19,14 +19,14 @@ private:
     map<const T*, pro2::Rect> obj_rect_map_;
     
     // Mapa que donat un left retorna els objectes que comencen allà
-    map<int, set<const T*>> x_start_map_;
+    map<int, set<T*>> x_start_map_;
 
 public:
     Finder() {}
 
-    void add(const T *t);
-    void update(const T *t);
-    void remove(const T *t);
+    void add(T *t);
+    void update(T *t);
+    void remove(T *t);
 
     /**
     * @brief Retorna el conjunt d'objectes amb rectangles 
@@ -40,7 +40,7 @@ public:
     * @returns Un conjunt de punters a objectes que tenen un 
     *          rectangle parcial o totalment dins de `rect`
     */
-    set<const T *> query(pro2::Rect rect) const;
+    set<T *> query(pro2::Rect rect);
 };
 
 #endif // FINDER_HH
