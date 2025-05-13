@@ -17,7 +17,7 @@ Game::Game(int width, int height)
         Strawberry({325, 150}),
       },
       finished_(false) {
-    for (int i = 1; i < 20000; i++) {
+    for (int i = 1; i < 100000; i++) {
         platforms_.push_back(Platform(250 + i * 200, 400 + i * 200, 150, 161));
         strawberrys_.push_back(Strawberry({325 + i * 200, 150}));
     }
