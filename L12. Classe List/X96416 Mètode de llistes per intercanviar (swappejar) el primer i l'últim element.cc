@@ -525,11 +525,16 @@ public:
       Item *first = iteminf.next;
       Item *last = itemsup.prev;
 
+      // Indica al segon que el primer és l'últim
       first->next->prev = last;
+      // Indica al iteminf que el primer és last
       iteminf.next = last;
+      // Indica a last que el següent és el segon
       last->next = first->next;
 
+      // Indica a penúltim que l'últim és el primer
       last->prev->next = first;
+      // Indica al primer que l'anterior és el penúltim
       first->prev = last->prev;
       
       last->prev = &iteminf;
